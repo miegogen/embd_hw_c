@@ -7,8 +7,6 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
 void substraction(void)
 {
     int a, b;
