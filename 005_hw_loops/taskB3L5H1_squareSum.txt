@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+    B3L5H1_squareSum();
+
+    return 0;
+}
+
+void B3L5H1_squareSum(void)
+{
+    int a, b;
+    int sum = 0;
+
+    printf ("Enter two numberd by space\n");
+    scanf ("%d%d", &a, &b);
+
+    for (int i = 0; i <= b - a; i++) {
+        int c = a + i;
+        sum = sum + (c * c);
+    }
+
+    printf ("sum = %d\n", sum);
+}

@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+    B17H5_allLuckyNumbers();
+
+    return 0;
+}
+
+void B17H5_allLuckyNumbers(void)
+{
+    int inputNum;
+
+    printf ("Enter a number bigger than 10\n");
+    scanf ("%d", &inputNum);
+
+    for (int i = 10; i < inputNum; i++) {
+        if (checkNumber(i)) {
+            printf ("%d ", i);
+        }
+    }
+}
+
+int checkNumber(int number)
+{
+    int mul = 1;
+    int sum = 0;
+    int tempNumber = number;
+
+    while (tempNumber > 0) {
+        int digit = tempNumber % 10;
+        mul *= digit;
+        sum += digit;
+
+        tempNumber /= 10;
+    }
+
+    return mul == sum;
+}
+

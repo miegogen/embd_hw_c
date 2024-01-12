@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+    B4L5H2_exactlyThreeNumbers();
+
+    return 0;
+}
+
+void B4L5H2_exactlyThreeNumbers(void)
+{
+    int a, b;
+
+    printf ("Enter a number\n");
+    scanf ("%d", &a);
+
+    b = a / 100;
+    if (b > 0 && b < 10) {
+        printf ("YES\n");
+    } else {
+        printf ("NO\n");
+    }
+}
+

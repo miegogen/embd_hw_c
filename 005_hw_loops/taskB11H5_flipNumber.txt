@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+    B11H5_flipNumber();
+
+    return 0;
+}
+
+void B11H5_flipNumber(void)
+{
+    int inputNum;
+    int flip = 0;
+
+    printf ("Enter a numbers\n");
+    scanf ("%d", &inputNum);
+
+    while (inputNum > 0) {
+        flip = flip * 10 + (inputNum % 10);
+        inputNum = inputNum / 10;
+    }
+
+    printf ("%d\n", flip);
+}
+
